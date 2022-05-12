@@ -74,6 +74,9 @@
 		  <HintPath>..\packages\SemanticVersioning.2.0.0\lib\net45\SemanticVersioning.dll</HintPath>
 		  <Private>False</Private>
 	  </Reference>
+	  <Reference Include="SideLoader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+	    <HintPath>..\packages\Outward.SideLoader.3.6.7\lib\net472\SideLoader.dll</HintPath>
+	  </Reference>
 	  <Reference Include="System" />
 	  <Reference Include="System.Core" />
 	  <Reference Include="System.Xml.Linq" />
@@ -328,6 +331,10 @@
 	  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Effects\TravelSpeedEffect.cs" />
+    <Compile Include="Effects\TravelSpeedEffectTemplate.cs" />
+    <Compile Include="Effects\TravelSpeedStatusEffect.cs" />
+    <Compile Include="Items\TravelPotion.cs" />
     <Compile Include="TravelSpeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
