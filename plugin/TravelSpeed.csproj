@@ -36,8 +36,7 @@
 		  <HintPath>..\lib\Assembly-CSharp.dll</HintPath>
 	  </Reference>
 	  <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-		  <HintPath>..\packages\Outward.GameLibs.2022.1.1-r.0\lib\net472\Assembly-CSharp-firstpass.dll</HintPath>
-		  <Private>False</Private>
+	    <HintPath>..\packages\Outward.GameLibs.2022.5.17-r.0\lib\net472\Assembly-CSharp-firstpass.dll</HintPath>
 	  </Reference>
 	  <Reference Include="BepInEx">
 	    <HintPath>..\packages\BepInEx.BaseLib.5.4.16\lib\net35\BepInEx.dll</HintPath>
@@ -67,15 +66,14 @@
 		  <Private>False</Private>
 	  </Reference>
 	  <Reference Include="Photon3Unity3D, Version=4.1.4.1, Culture=neutral, processorArchitecture=MSIL">
-		  <HintPath>..\packages\Outward.GameLibs.2022.1.1-r.0\lib\net472\Photon3Unity3D.dll</HintPath>
-		  <Private>False</Private>
+	    <HintPath>..\packages\Outward.GameLibs.2022.5.17-r.0\lib\net472\Photon3Unity3D.dll</HintPath>
 	  </Reference>
 	  <Reference Include="SemanticVersioning, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a89bb7dc6f7a145c, processorArchitecture=MSIL">
 		  <HintPath>..\packages\SemanticVersioning.2.0.0\lib\net45\SemanticVersioning.dll</HintPath>
 		  <Private>False</Private>
 	  </Reference>
 	  <Reference Include="SideLoader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-	    <HintPath>..\packages\Outward.SideLoader.3.6.7\lib\net472\SideLoader.dll</HintPath>
+	    <HintPath>..\packages\Outward.SideLoader.3.7.0\lib\net472\SideLoader.dll</HintPath>
 	  </Reference>
 	  <Reference Include="System" />
 	  <Reference Include="System.Core" />
@@ -254,8 +252,7 @@
 		  <Private>False</Private>
 	  </Reference>
 	  <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-		  <HintPath>..\packages\Outward.GameLibs.2022.1.1-r.0\lib\net472\UnityEngine.UI.dll</HintPath>
-		  <Private>False</Private>
+	    <HintPath>..\packages\Outward.GameLibs.2022.5.17-r.0\lib\net472\UnityEngine.UI.dll</HintPath>
 	  </Reference>
 	  <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
 		  <HintPath>..\packages\UnityEngine.Modules.2018.4.8\lib\net45\UnityEngine.UIElementsModule.dll</HintPath>
@@ -341,10 +338,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="..\packages\BepInEx.Analyzers.1.0.7\analyzers\dotnet\cs\BepInEx.Analyzers.CodeFixes.dll" />
-    <Analyzer Include="..\packages\BepInEx.Analyzers.1.0.7\analyzers\dotnet\cs\BepInEx.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
