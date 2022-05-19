@@ -11,6 +11,9 @@ Special thanks to **Sinai** for SideLoader help.
 
 ## Changelog
 
+### 1.0.1
+- Definitive Edition support (vanilla might still work, untested)
+
 ### 1.0.0
 - Travel Speed potion
 - Travel Speed potion alchemy recipe
