@@ -11,7 +11,7 @@ namespace TravelSpeed.Effects {
 		public Type SLTemplateModel => typeof(TravelSpeedEffectTemplate);
 		public Type GameModel => typeof(TravelSpeedEffect);
 
-		protected override void ActivateLocally(Character _affectedCharacter, object[] _infos) {
+		public override void ActivateLocally(Character _affectedCharacter, object[] _infos) {
 			if (_affectedCharacter.EngagedCharacters.Any(it => it)) {
 				_affectedCharacter.Speed = DefaultSpeed;
 			} else {
@@ -19,7 +19,7 @@ namespace TravelSpeed.Effects {
 			}
 		}
 		
-		protected override void StopAffectLocally(Character _affectedCharacter) {
+		public override void StopAffectLocally(Character _affectedCharacter) {
 			_affectedCharacter.Speed = DefaultSpeed;
 		}
 	}
