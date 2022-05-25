@@ -1,18 +1,26 @@
 using System;
 using System.Linq;
 using SideLoader;
+using UnityEngine;
 
 namespace TravelSpeed.Effects {
 	public class TravelSpeedEffect : Effect, ICustomModel {
 		
 		private const float DefaultSpeed = 4.0f;
+		private float lastCombatTime = Time.time;
 		
 		public Type SLTemplateModel => typeof(TravelSpeedEffectTemplate);
 		public Type GameModel => typeof(TravelSpeedEffect);
 
 		private void ResetStatus(Character character) {
+			lastCombatTime = Time.time;
 			character.Speed = DefaultSpeed;
 			RemoveStaminaBurnMultiplier(character);
+		}
+
+		private float GetActualSpeedMultiplier() {
+			float timeRatio = Mathf.Clamp((Time.time - lastCombatTime) / Constants.TRAVEL_SPEED_TIME_TO_MAX, 0.0f, 1.0f);
+			return Constants.TRAVEL_SPEED_MULTIPLIER_MIN + timeRatio * (Constants.TRAVEL_SPEED_MULTIPLIER_MAX - Constants.TRAVEL_SPEED_MULTIPLIER_MIN);
 		}
 		
 		private void SetStaminaBurnMultiplier(Character character, float value) {
@@ -27,7 +35,7 @@ namespace TravelSpeed.Effects {
 			if (_affectedCharacter.EngagedCharacters.Any(it => it)) {
 				ResetStatus(_affectedCharacter);
 			} else {
-				_affectedCharacter.Speed = DefaultSpeed * Constants.TRAVEL_SPEED_MULTIPLIER;
+				_affectedCharacter.Speed = DefaultSpeed * GetActualSpeedMultiplier();
 				SetStaminaBurnMultiplier(_affectedCharacter, Constants.STAMINA_BURN_MULTIPLIER);
 			}
 		}

@@ -4,7 +4,9 @@ namespace TravelSpeed {
 		public const string POTION_RECIPE_NAME = TravelSpeed.GUID+".travelpotion";
 		public const string POTION_DROPTABLE_UID = POTION_RECIPE_NAME+".droptable";
 		
-		public const float TRAVEL_SPEED_MULTIPLIER = 2.0f;
+		public const float TRAVEL_SPEED_MULTIPLIER_MIN = 1.2f;
+		public const float TRAVEL_SPEED_MULTIPLIER_MAX = 2.5f;
+		public const float TRAVEL_SPEED_TIME_TO_MAX = 30f; // In seconds
 		public const float STAMINA_BURN_MULTIPLIER = 3.0f;
 
 	}
