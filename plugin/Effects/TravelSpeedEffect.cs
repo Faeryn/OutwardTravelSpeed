@@ -35,8 +35,9 @@ namespace TravelSpeed.Effects {
 			if (_affectedCharacter.EngagedCharacters.Any(it => it)) {
 				ResetStatus(_affectedCharacter);
 			} else {
-				_affectedCharacter.Speed = DefaultSpeed * GetActualSpeedMultiplier();
-				SetStaminaBurnMultiplier(_affectedCharacter, Constants.STAMINA_BURN_MULTIPLIER);
+				float speedMult = GetActualSpeedMultiplier();
+				_affectedCharacter.Speed = DefaultSpeed * speedMult;
+				SetStaminaBurnMultiplier(_affectedCharacter, speedMult);
 			}
 		}
 		

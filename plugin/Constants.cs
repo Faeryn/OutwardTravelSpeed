@@ -7,7 +7,6 @@ namespace TravelSpeed {
 		public const float TRAVEL_SPEED_MULTIPLIER_MIN = 1.2f;
 		public const float TRAVEL_SPEED_MULTIPLIER_MAX = 2.5f;
 		public const float TRAVEL_SPEED_TIME_TO_MAX = 30f; // In seconds
-		public const float STAMINA_BURN_MULTIPLIER = 3.0f;
 
 	}
 }
