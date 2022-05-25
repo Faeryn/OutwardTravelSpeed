@@ -11,16 +11,30 @@ namespace TravelSpeed.Effects {
 		public Type SLTemplateModel => typeof(TravelSpeedEffectTemplate);
 		public Type GameModel => typeof(TravelSpeedEffect);
 
+		private void ResetStatus(Character character) {
+			character.Speed = DefaultSpeed;
+			RemoveStaminaBurnMultiplier(character);
+		}
+		
+		private void SetStaminaBurnMultiplier(Character character, float value) {
+			character.Stats.GetStat(CharacterStats.StatType.StaminaBurn).AddMultiplierStack(TravelSpeed.CUSTOM_STATUS_IDENTIFIER, value);
+		}
+
+		private void RemoveStaminaBurnMultiplier(Character character) {
+			character.Stats.GetStat(CharacterStats.StatType.StaminaBurn).RemoveMultiplierStack(TravelSpeed.CUSTOM_STATUS_IDENTIFIER);
+		}
+
 		public override void ActivateLocally(Character _affectedCharacter, object[] _infos) {
 			if (_affectedCharacter.EngagedCharacters.Any(it => it)) {
-				_affectedCharacter.Speed = DefaultSpeed;
+				ResetStatus(_affectedCharacter);
 			} else {
 				_affectedCharacter.Speed = DefaultSpeed * TravelSpeed.TRAVEL_SPEED_MULTIPLIER;
+				SetStaminaBurnMultiplier(_affectedCharacter, TravelSpeed.STAMINA_BURN_MULTIPLIER);
 			}
 		}
 		
 		public override void StopAffectLocally(Character _affectedCharacter) {
-			_affectedCharacter.Speed = DefaultSpeed;
+			ResetStatus(_affectedCharacter);
 		}
 	}
 }

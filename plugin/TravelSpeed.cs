@@ -24,6 +24,7 @@ namespace TravelSpeed {
 		internal static ManualLogSource Log;
 
 		public const float TRAVEL_SPEED_MULTIPLIER = 2.0f;
+		public const float STAMINA_BURN_MULTIPLIER = 3.0f;
 		
 
 		internal void Awake() {
@@ -97,7 +98,6 @@ namespace TravelSpeed {
 							DroppedItemID = potionRecipeItem.New_ItemID
 						}
 					}
-					
 				}}
 			};
 			potionAndRecipeDT.ApplyTemplate();
