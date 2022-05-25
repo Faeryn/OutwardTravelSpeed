@@ -1,6 +1,7 @@
 # TravelSpeed
 
-Adds a potion that significantly increases movement speed when not in combat. The potion and recipe has a chance to appear at the Soroborean Caravanner.  
+Adds a potion that significantly increases movement speed when not in combat. The increase gradually happens over time and resets upon entering combat. The potion also makes stamina burn faster.  
+The potion and recipe has a chance to appear at the Soroborean Caravanner.  
 Special thanks to **Sinai** for SideLoader help.
 
 ## Planned Features
@@ -12,7 +13,7 @@ Special thanks to **Sinai** for SideLoader help.
 ## Changelog
 
 ### 1.1.0
-- Travel speed now gradually increases over time outside combat to slightly faster than in previous versions
+- Travel speed now gradually increases over time outside combat
 - Travel Potion now also makes stamina burn faster when not in combat depending on the actual travel speed increase
 
 ### 1.0.1
