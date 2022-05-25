@@ -20,4 +20,9 @@
 	<PackageReference Include="Outward.GameLibs" Version="2022.5.17-r.0" />
 	<PackageReference Include="Outward.SideLoader" Version="3.7.0" />
 </ItemGroup>
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>..\lib\Assembly-CSharp.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>

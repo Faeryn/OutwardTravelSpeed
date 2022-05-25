@@ -11,6 +11,9 @@ Special thanks to **Sinai** for SideLoader help.
 
 ## Changelog
 
+### 1.1.0
+- Travel Potion now also makes stamina burn faster when not in combat
+
 ### 1.0.1
 - Definitive Edition support (vanilla might still work, untested)
 

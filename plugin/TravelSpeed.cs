@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using BepInEx;
-using BepInEx.Configuration;
+﻿using BepInEx;
 using BepInEx.Logging;
-using Epic.OnlineServices;
 using SideLoader;
 using TravelSpeed.Effects;
 using TravelSpeed.Items;
-using UnityEngine;
 
 namespace TravelSpeed {
 	[BepInDependency(SL.GUID, BepInDependency.DependencyFlags.HardDependency)]
@@ -17,7 +10,7 @@ namespace TravelSpeed {
 	public class TravelSpeed : BaseUnityPlugin {
 		public const string GUID = "faeryn.travelspeed";
 		public const string NAME = "TravelSpeed";
-		public const string VERSION = "1.0.1";
+		public const string VERSION = "1.1.0";
 		
 		public const string CUSTOM_STATUS_IDENTIFIER = "TravelSpeed";
 

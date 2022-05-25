@@ -1,7 +1,6 @@
 using System;
 using System.Linq;
 using SideLoader;
-using UnityEngine;
 
 namespace TravelSpeed.Effects {
 	public class TravelSpeedEffect : Effect, ICustomModel {
