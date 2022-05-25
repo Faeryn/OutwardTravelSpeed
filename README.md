@@ -12,7 +12,8 @@ Special thanks to **Sinai** for SideLoader help.
 ## Changelog
 
 ### 1.1.0
-- Travel Potion now also makes stamina burn faster when not in combat
+- Travel speed now gradually increases over time outside combat to slightly faster than in previous versions
+- Travel Potion now also makes stamina burn faster when not in combat depending on the actual travel speed increase
 
 ### 1.0.1
 - Definitive Edition support (vanilla might still work, untested)
