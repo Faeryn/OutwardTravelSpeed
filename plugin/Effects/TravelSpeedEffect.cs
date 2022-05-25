@@ -16,19 +16,19 @@ namespace TravelSpeed.Effects {
 		}
 		
 		private void SetStaminaBurnMultiplier(Character character, float value) {
-			character.Stats.GetStat(CharacterStats.StatType.StaminaBurn).AddMultiplierStack(TravelSpeed.CUSTOM_STATUS_IDENTIFIER, value);
+			character.Stats.GetStat(CharacterStats.StatType.StaminaBurn).AddMultiplierStack(Constants.CUSTOM_STATUS_IDENTIFIER, value);
 		}
 
 		private void RemoveStaminaBurnMultiplier(Character character) {
-			character.Stats.GetStat(CharacterStats.StatType.StaminaBurn).RemoveMultiplierStack(TravelSpeed.CUSTOM_STATUS_IDENTIFIER);
+			character.Stats.GetStat(CharacterStats.StatType.StaminaBurn).RemoveMultiplierStack(Constants.CUSTOM_STATUS_IDENTIFIER);
 		}
 
 		public override void ActivateLocally(Character _affectedCharacter, object[] _infos) {
 			if (_affectedCharacter.EngagedCharacters.Any(it => it)) {
 				ResetStatus(_affectedCharacter);
 			} else {
-				_affectedCharacter.Speed = DefaultSpeed * TravelSpeed.TRAVEL_SPEED_MULTIPLIER;
-				SetStaminaBurnMultiplier(_affectedCharacter, TravelSpeed.STAMINA_BURN_MULTIPLIER);
+				_affectedCharacter.Speed = DefaultSpeed * Constants.TRAVEL_SPEED_MULTIPLIER;
+				SetStaminaBurnMultiplier(_affectedCharacter, Constants.STAMINA_BURN_MULTIPLIER);
 			}
 		}
 		

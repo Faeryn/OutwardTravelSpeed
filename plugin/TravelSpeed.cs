@@ -11,14 +11,8 @@ namespace TravelSpeed {
 		public const string GUID = "faeryn.travelspeed";
 		public const string NAME = "TravelSpeed";
 		public const string VERSION = "1.1.0";
-		
-		public const string CUSTOM_STATUS_IDENTIFIER = "TravelSpeed";
 
 		internal static ManualLogSource Log;
-
-		public const float TRAVEL_SPEED_MULTIPLIER = 2.0f;
-		public const float STAMINA_BURN_MULTIPLIER = 3.0f;
-		
 
 		internal void Awake() {
 			Log = this.Logger;
@@ -38,7 +32,7 @@ namespace TravelSpeed {
 			potion.ApplyTemplate();
 			
 			SL_Recipe potionRecipe = new SL_Recipe {
-				UID = TravelPotion.RECIPE_NAME,
+				UID = Constants.POTION_RECIPE_NAME,
 				StationType = Recipe.CraftingType.Alchemy,
 				Ingredients = {
 					new SL_Recipe.Ingredient {
@@ -64,7 +58,7 @@ namespace TravelSpeed {
 			potionRecipe.ApplyTemplate();
 
 			SL_RecipeItem potionRecipeItem = new SL_RecipeItem {
-				RecipeUID = TravelPotion.RECIPE_NAME,
+				RecipeUID = Constants.POTION_RECIPE_NAME,
 				Target_ItemID = 5700110,
 				New_ItemID = -12500,
 				Name = "Alchemy: Travel Potion"
@@ -72,7 +66,7 @@ namespace TravelSpeed {
 			potionRecipeItem.ApplyTemplate();
 
 			SL_DropTable potionAndRecipeDT = new SL_DropTable {
-				UID = TravelPotion.RECIPE_NAME+".droptable",
+				UID = Constants.POTION_DROPTABLE_UID,
 				RandomTables = {new SL_RandomDropGenerator {
 					MinNumberOfDrops = 1,
 					MaxNumberOfDrops = 3,
@@ -96,7 +90,7 @@ namespace TravelSpeed {
 			potionAndRecipeDT.ApplyTemplate();
 			
 			SL_DropTableAddition potionAndRecipeForMerchants = new SL_DropTableAddition {
-				SelectorTargets = {"-MSrkT502k63y3CV2j98TQ", "G_GyAVjRWkq8e2L8WP4TgA"},
+				SelectorTargets = {"-MSrkT502k63y3CV2j98TQ", "G_GyAVjRWkq8e2L8WP4TgA"}, // Soroborean Caravanner
 				DropTableUIDsToAdd = {potionAndRecipeDT.UID}
 				
 			};

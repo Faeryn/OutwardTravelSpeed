@@ -5,7 +5,7 @@ namespace TravelSpeed.Effects {
 		public TravelSpeedStatusEffect() {
 			TargetStatusIdentifier = "Speed Up";
 			NewStatusID = -12000;
-			StatusIdentifier = TravelSpeed.CUSTOM_STATUS_IDENTIFIER;
+			StatusIdentifier = Constants.CUSTOM_STATUS_IDENTIFIER;
 			Name = "Travel Speed";
 			Description = "Move faster when not in combat";
 			Purgeable = true;
