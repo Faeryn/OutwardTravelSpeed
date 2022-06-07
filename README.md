@@ -2,6 +2,7 @@
 
 Adds a potion that significantly increases movement speed when not in combat. The increase gradually happens over time and resets upon entering combat. The potion also makes stamina burn faster.  
 The potion and recipe has a chance to appear at the Soroborean Caravanner.  
+The status effect's timer counts down only outside combat.  
 Special thanks to **Sinai** for SideLoader help.
 
 ## Planned Features
@@ -11,6 +12,9 @@ Special thanks to **Sinai** for SideLoader help.
 - Boots for permanent effect (possibly not easy to get)
 
 ## Changelog
+
+### 1.2.0
+- Travel speed status effect's timer is suspended while in combat
 
 ### 1.1.0
 - Travel speed now gradually increases over time outside combat
