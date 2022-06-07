@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using SideLoader;
+using TravelSpeed.Extensions;
 using UnityEngine;
 
 namespace TravelSpeed.Effects {
@@ -34,15 +35,18 @@ namespace TravelSpeed.Effects {
 		public override void ActivateLocally(Character _affectedCharacter, object[] _infos) {
 			if (_affectedCharacter.EngagedCharacters.Any(it => it)) {
 				ResetStatus(_affectedCharacter);
+				m_parentStatusEffect.SetTimerSuspended(true);
 			} else {
 				float speedMult = GetActualSpeedMultiplier();
 				_affectedCharacter.Speed = DefaultSpeed * speedMult;
 				SetStaminaBurnMultiplier(_affectedCharacter, speedMult);
+				m_parentStatusEffect.SetTimerSuspended(false);
 			}
 		}
 		
 		public override void StopAffectLocally(Character _affectedCharacter) {
 			ResetStatus(_affectedCharacter);
+			m_parentStatusEffect.SetTimerSuspended(false);
 		}
 	}
 }

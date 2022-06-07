@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+using HarmonyLib;
 using SideLoader;
 using TravelSpeed.Effects;
 using TravelSpeed.Items;
@@ -18,6 +19,7 @@ namespace TravelSpeed {
 			Log = this.Logger;
 			Log.LogMessage($"Starting {NAME} {VERSION}");
 			InitializeSL();
+			new Harmony(GUID).PatchAll();
 		}
 
 		private void InitializeSL() {
