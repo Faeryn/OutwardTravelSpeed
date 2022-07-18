@@ -8,7 +8,7 @@ namespace TravelSpeed.Items {
 			Name = "Travel Potion";
 			Description = "Potion that makes you move faster when not in combat";
 			StatsHolder = new SL_ItemStats {
-				BaseValue = 25,
+				BaseValue = 15,
 				RawWeight = 0.3f
 			};
 			EffectBehaviour = EditBehaviours.Destroy;

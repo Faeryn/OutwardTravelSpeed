@@ -42,8 +42,8 @@ namespace TravelSpeed {
 						SelectorValue = "Water"
 					},
 					new SL_Recipe.Ingredient {
-						Type = RecipeIngredient.ActionTypes.AddSpecificIngredient,
-						SelectorValue = "4000230" // Bird Egg
+						Type = RecipeIngredient.ActionTypes.AddGenericIngredient,
+						SelectorValue = "Egg"
 					},
 					new SL_Recipe.Ingredient {
 						Type = RecipeIngredient.ActionTypes.AddSpecificIngredient,
@@ -53,7 +53,7 @@ namespace TravelSpeed {
 				Results = {
 					new SL_Recipe.ItemQty {
 						ItemID = potion.New_ItemID, 
-						Quantity = 1
+						Quantity = 2
 					}
 				}
 			};
