@@ -13,6 +13,9 @@ Special thanks to **Sinai** for SideLoader help.
 
 ## Changelog
 
+### 1.2.1
+- Recipe now accepts more types of a certain ingredient and also creates 2 potions
+
 ### 1.2.0
 - Travel speed status effect's timer is suspended while in combat
 

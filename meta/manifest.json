@@ -1,7 +1,7 @@
 {
     "name": "TravelSpeed",
     "author": "Faeryn",
-    "version_number": "1.2.0",
+    "version_number": "1.2.1",
     "website_url": "https://github.com/Faeryn/OutwardTravelSpeed",
     "description": "Adds a potion that significantly increases movement speed when not in combat. The increase gradually happens over time and resets upon entering combat. The potion and recipe has a chance to appear at the Soroborean Caravanner.",
     "dependencies": [

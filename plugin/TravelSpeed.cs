@@ -11,7 +11,7 @@ namespace TravelSpeed {
 	public class TravelSpeed : BaseUnityPlugin {
 		public const string GUID = "faeryn.travelspeed";
 		public const string NAME = "TravelSpeed";
-		public const string VERSION = "1.2.0";
+		public const string VERSION = "1.2.1";
 
 		internal static ManualLogSource Log;
 
