@@ -6,10 +6,7 @@
     "description": "Adds a potion that significantly increases movement speed when not in combat. The increase gradually happens over time and resets upon entering combat. The potion and recipe has a chance to appear at the Soroborean Caravanner.",
     "dependencies": [
         "BepInEx-BepInExPack_Outward-5.4.18",
-        "sinai-dev-SideLoader-3.7.0"
-    ],
-    "artifacts": {
-        "plugin": [],
-        "patcher": []
-    }
+        "sinai-dev-SideLoader-3.7.0",
+        "Faeryn-LocalizationExtension-1.1.0"
+    ]
 }
