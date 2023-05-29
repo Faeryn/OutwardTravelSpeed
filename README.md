@@ -13,6 +13,9 @@ Special thanks to **Sinai** for SideLoader help.
 
 ## Changelog
 
+### 1.2.2
+- Supported languages: English, French, German, Italian, Spanish, Chinese, Japanese
+
 ### 1.2.1
 - Recipe now accepts more types of a certain ingredient and also creates 2 potions
 
