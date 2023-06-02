@@ -13,6 +13,9 @@ Special thanks to **Sinai** for SideLoader help.
 
 ## Changelog
 
+### 1.2.3
+- Russian translation by **kot-aptec**
+
 ### 1.2.2
 - Supported languages: English, French, German, Italian, Spanish, Chinese, Japanese
 
